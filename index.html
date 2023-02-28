@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IWNC assignment</title>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-family: sans-serif;
+      }
+      .main-heading {
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      table th,
+      table td {
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+          rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      table th {
+        background-color: #f2f2f2;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"] {
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+      }
+
+      input[type="submit"] {
+        background-color: #000000;
+        color: white;
+        float: right;
+        margin: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3c29e7;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const App = () => {
+        const [formData, setFormData] = React.useState({
+          name: "Rohan Verma",
+          age: "21",
+          email: "rohan@gmail.com",
+          phone: "1234567890",
+          gender: "male",
+        });
+
+        const handleChange = (event) => {
+          const name = event.target.name;
+          const value = event.target.value;
+
+          setFormData((values) => ({ ...values, [name]: value }));
+        };
+
+        return (
+          <div class="container">
+            <h1 class="main-heading">Editable Table for IWCN Company</h1>
+            <form>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Gender</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="age"
+                        value={formData.age}
+                        onChange={handleChange}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="gender"
+                        value={formData.gender}
+                        onChange={handleChange}
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="name" />
+                    </td>
+                    <td>
+                      <input type="text" name="age" />
+                    </td>
+                    <td>
+                      <input type="email" name="email" />
+                    </td>
+                    <td>
+                      <input type="number" name="Phone" />
+                    </td>
+                    <td>
+                      <input type="text" name="gender" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="name" />
+                    </td>
+                    <td>
+                      <input type="text" name="age" />
+                    </td>
+                    <td>
+                      <input type="email" name="email" />
+                    </td>
+                    <td>
+                      <input type="number" name="Phone" />
+                    </td>
+                    <td>
+                      <input type="text" name="gender" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="name" />
+                    </td>
+                    <td>
+                      <input type="text" name="age" />
+                    </td>
+                    <td>
+                      <input type="email" name="email" />
+                    </td>
+                    <td>
+                      <input type="number" name="Phone" />
+                    </td>
+                    <td>
+                      <input type="text" name="gender" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="name" />
+                    </td>
+                    <td>
+                      <input type="text" name="age" />
+                    </td>
+                    <td>
+                      <input type="email" name="email" />
+                    </td>
+                    <td>
+                      <input type="number" name="Phone" />
+                    </td>
+                    <td>
+                      <input type="text" name="gender" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="name" />
+                    </td>
+                    <td>
+                      <input type="text" name="age" />
+                    </td>
+                    <td>
+                      <input type="email" name="email" />
+                    </td>
+                    <td>
+                      <input type="number" name="Phone" />
+                    </td>
+                    <td>
+                      <input type="text" name="gender" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="name" />
+                    </td>
+                    <td>
+                      <input type="text" name="age" />
+                    </td>
+                    <td>
+                      <input type="email" name="email" />
+                    </td>
+                    <td>
+                      <input type="number" name="Phone" />
+                    </td>
+                    <td>
+                      <input type="text" name="gender" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="name" />
+                    </td>
+                    <td>
+                      <input type="text" name="age" />
+                    </td>
+                    <td>
+                      <input type="email" name="email" />
+                    </td>
+                    <td>
+                      <input type="number" name="Phone" />
+                    </td>
+                    <td>
+                      <input type="text" name="gender" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" name="name" />
+                    </td>
+                    <td>
+                      <input type="text" name="age" />
+                    </td>
+                    <td>
+                      <input type="email" name="email" />
+                    </td>
+                    <td>
+                      <input type="number" name="Phone" />
+                    </td>
+                    <td>
+                      <input type="text" name="gender" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        );
+      };
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
